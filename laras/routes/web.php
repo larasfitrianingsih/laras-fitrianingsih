@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('helo', function () {
-    return ('Hello World!!');
+Route::get('/helo', function () {
+    return ('Hello Worasasa!!');
+});
+
+Route::get('/welcome', function () {
+echo "Welcome";
+}); 
+
+
+Route::get('/show/{id}', function ($id) {
+echo "Nilai Parameter Adalah ".$id;
 });
