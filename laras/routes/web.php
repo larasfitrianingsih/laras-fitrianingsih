@@ -24,13 +24,13 @@ Route::get('/welcome', function () {
 });
 
 
-Route::post('/store', function () {
-// sintak untuk menyimpan data
-});
+// Route::post('/store', function () {
+// // sintak untuk menyimpan data
+// });
 
-Route::get('/show/{id}', function ($id) {
-echo "Nilai Parameter Adalah ".$id;
-});
+// Route::get('/show/{id}', function ($id) {
+// echo "Nilai Parameter Adalah ".$id;
+// });
 
 Route::get('/edit/{nama}', function ($nama) {
 echo "Nilai Parameter Adalah ".$nama;
@@ -46,9 +46,9 @@ echo "Route diakses menggunakan nama";
 
 Route::get('/barangs', 'barangsController@index');
 
-Route::get('/produk', 'produkController@index');
 
-Route::get('/produk/show', 'produkController@show');
+
+// Route::get('/produk/show', 'produkController@show');
 
 Route::get('/halaman',function(){
 $title = 'Harry Pooter';
@@ -57,3 +57,11 @@ return view('konten.halaman',compact('title','konten'));
 });
 
 Route::get('/pelanggan', 'pelangganController@index');
+
+Route::get('/produk', 'produkController@index');
+
+Route::get('/produk/store', 'produkController@store');
+
+Route::get('/produk/update', 'produkController@update');
+
+Route::get('/produk/delete', 'produkController@delete');
